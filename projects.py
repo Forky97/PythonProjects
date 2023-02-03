@@ -6,25 +6,7 @@ class Node :
         self.left = left
         self.right = right
 
-
-class ReverseNodeFunction():
-
-
-    def search_value(self,tree,number,count=8):
-        if tree is None:
-            return f'Нет этого числа число обходов равно {count}'
-        elif tree.value == number:
-            return f'Нашли число , сделали {count} обходов '
-        elif tree.value>number:
-            return self.search_value(tree.left,number,count+1)
-        else:
-            return self.search_value(tree.right,number,count+1)
-
-
-
-
-
-class NodeFunction(ReverseNodeFunction):
+class NodeFunction:
 
     def insert_node(self,tree,node):
         if tree.value > node.value:
@@ -39,7 +21,6 @@ class NodeFunction(ReverseNodeFunction):
                 self.insert_node(tree.right,node)
 
     def search_value(self,tree,number,count=0):
-        super().search_value(tree,number)
         if tree is None:
             return f'Нет этого числа число обходов равно {count}'
         elif tree.value == number:
@@ -48,7 +29,6 @@ class NodeFunction(ReverseNodeFunction):
             return self.search_value(tree.left,number,count+1)
         else:
             return self.search_value(tree.right,number,count+1)
-
 
 
 Tree = Node(50)
