@@ -34,8 +34,8 @@ def find_lowest_cost_node(costs):
     lowest_cost = float("inf")
     lowest_cost_node = None
     for node in costs:
-        if costs[node] < lowest_cost_node and node not in procesed:
-            lowest_cost = cost
+        if costs[node] < lowest_cost and node not in procesed:
+            lowest_cost = costs[node]
             lowest_cost_node = node
     return lowest_cost_node
 
@@ -50,8 +50,3 @@ while node is not None:
             parents[n] = node
     procesed.append(node)
     node = find_lowest_cost_node(costs)
-
-
-
-print(graph)
-
