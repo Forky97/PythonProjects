@@ -1,13 +1,12 @@
 ########## first metod (Simple) ########
 
 num1,num2 = 0,1
-
 for _ in range(int(input())):
     num1,num2 = num2,num1+num2
     print(num1,end=' ')
 
 
-####### second method (Recusion)
+####### second method (Recursion)
 
 def fibo (num):
     if num == 1:
@@ -23,4 +22,4 @@ def fibo_list(num,lst=[1,1]):
         lst.append(lst[-1]*lst[-2])
     return lst
 
-print(fibo(6))
+print(fibo(int(input())))
